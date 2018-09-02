@@ -1,4 +1,4 @@
-# RESM-Env
+# EnvJs
 A wrap service of dotenv utilizing fallback for non existing environment configuration in Nodejs
 
 ## Prerequisite
