@@ -10,8 +10,17 @@ const fs = require('fs');
 
 class Env {
     constructor(config) {
-        // all environment will be specified in the customEnv Object
-        this.customEnv = dotenv.parse(fs.readFileSync(config.path, config.encoding));
+        this.customEnv = {};
+        // error is stored here.
+        this.error;
+
+        try {
+            let envFile = fs.readFileSync(config.path, config.encoding);
+            // all environment will be specified in the customEnv Object
+            this.customEnv = dotenv.parse(envFile);
+        } catch(e) {
+            this.error = e;
+        };
     }
     
     /**
