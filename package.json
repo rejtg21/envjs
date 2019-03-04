@@ -1,6 +1,6 @@
 {
   "name": "resm-env",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A wrap service of dotenv utilizing fallback for non existing environment configuration in Nodejs",
   "main": "index.js",
   "scripts": {

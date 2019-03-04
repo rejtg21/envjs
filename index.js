@@ -41,7 +41,7 @@ class Env {
         // if original is true ignored checking in customEnv
         if(!original) additionalEnv = this.customEnv[key];
 
-        return additionalEnv || process.env[key] || defaultValue;
+        return process.env[key] || additionalEnv || defaultValue;
     }
 
     /**
